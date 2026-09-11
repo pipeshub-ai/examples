@@ -30,7 +30,7 @@ Export the two values the SDK needs:
 
 ```bash
 export PIPESHUB_URL=http://localhost:3000        # your instance, no trailing path
-export PIPESHUB_BEARER_AUTH=eyJhbGciOi...         # the token you just minted
+export PIPESHUB_BEARER_AUTH=phpat_eyJhbGciOi...         # the token you just minted
 ```
 
 The SDKs read `PIPESHUB_BEARER_AUTH` automatically. `PIPESHUB_URL` is used by the scripts to build the API base URL.

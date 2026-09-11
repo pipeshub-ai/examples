@@ -58,7 +58,7 @@ The app is a thin layer: it makes the same two SDK calls as the [sdk-starter](..
 
 ```bash
 export PIPESHUB_URL=http://localhost:3000
-export PIPESHUB_BEARER_AUTH=eyJhbGciOi...
+export PIPESHUB_BEARER_AUTH=phpat_eyJhbGciOi...
 
 cd python
 uv run app.py            # installs pipeshub-sdk, fastapi, uvicorn on first run

@@ -77,14 +77,14 @@ A Personal Access Token is a long-lived credential that acts as *you*. Results r
 
 ```bash
 PIPESHUB_MCP_URL=http://localhost:3000/mcp
-PIPESHUB_MCP_TOKEN=eyJhbGciOi...
+PIPESHUB_MCP_TOKEN=phpat_eyJhbGciOi...
 ```
 
 4. Export them in your shell so the client configs below can pick them up:
 
 ```bash
 export PIPESHUB_MCP_URL=http://localhost:3000/mcp
-export PIPESHUB_MCP_TOKEN=eyJhbGciOi...
+export PIPESHUB_MCP_TOKEN=phpat_eyJhbGciOi...
 ```
 
 > Using PipesHub Cloud or a company instance? The URL will be `https://<your-instance>/mcp` instead of localhost. Everything else is the same.
@@ -148,7 +148,7 @@ Claude Desktop connects through a small local bridge (the `@pipeshub-ai/mcp` pac
       "args": [
         "@pipeshub-ai/mcp", "start",
         "--server-url", "http://localhost:3000",
-        "--bearer-auth", "YOUR_PIPESHUB_MCP_TOKEN"
+        "--bearer-auth", "phpat_YOUR_TOKEN_HERE"
       ]
     }
   }
@@ -218,7 +218,7 @@ PipesHub handles these with permission-aware retrieval (filtered per user before
 
 ## Customize it
 
-- **Limit what the assistant can reach.** Personal Access Tokens carry scopes. Create a token with only `semantic:read` and `kb:read` if you want search without the ability to run agents or download files.
+- **Limit what the assistant can reach.** Personal Access Tokens carry scopes. For search-only access, create a token with `semantic:write` (that's the scope that *runs* a search — `semantic:read` only covers search history), `kb:read`, and `connector:read`. Add `conversation:write` and `conversation:chat` if you also want `pipeshub_chat`. Leave out `agent:execute` if the assistant shouldn't be able to run your agents.
 - **Scope searches to one app.** `pipeshub_search` accepts filters for specific connectors or knowledge bases — useful in a project-level MCP config for a repo that only cares about one system.
 - **Use an agent instead of raw search.** If you've built a PipesHub agent with its own instructions and tools, `pipeshub_agents` lets the assistant delegate to it.
 - **Full tool reference** and per-client details, including OAuth-app setup for shared and service-account use, are in the [`pipeshub-ai/mcp-server`](https://github.com/pipeshub-ai/mcp-server) README.

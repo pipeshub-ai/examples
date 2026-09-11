@@ -5,7 +5,7 @@
       "args": [
         "@pipeshub-ai/mcp", "start",
         "--server-url", "http://localhost:3000",
-        "--bearer-auth", "YOUR_PIPESHUB_MCP_TOKEN"
+        "--bearer-auth", "phpat_YOUR_TOKEN_HERE"
       ]
     }
   }
