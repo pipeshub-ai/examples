@@ -33,7 +33,7 @@ Adapt these to your own data. Each one lists what a good answer should pull toge
 
 ## Try it with the seed documents
 
-[`seed-docs/`](seed-docs/) holds five short markdown files that tell one engineering story across four "systems" — a pull request, an incident postmortem, a chat thread, a design doc — plus an unrelated handbook page as a control. Upload them to a knowledge base (**Knowledge → New knowledge base → Upload**) and, once indexed, ask:
+[`seed-docs/`](seed-docs/) holds five short markdown files that tell one engineering story across four "systems" — a pull request, an incident postmortem, a chat thread, a design doc — plus an unrelated handbook page as a control. Upload them to a new knowledge base in the PipesHub UI and, once indexed, ask:
 
 - *Why was the retry logic in the billing worker changed? Cite your sources.* — should cite all four related records and ignore the handbook.
 - *What's the on-call policy for public holidays?* — should cite only the handbook.
