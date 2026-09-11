@@ -1,0 +1,5 @@
+# Add to ~/.codex/config.toml (all projects) or .codex/config.toml (this project).
+# bearer_token_env_var is the NAME of the environment variable holding the token.
+[mcp_servers.pipeshub]
+url = "http://localhost:3000/mcp"
+bearer_token_env_var = "PIPESHUB_MCP_TOKEN"

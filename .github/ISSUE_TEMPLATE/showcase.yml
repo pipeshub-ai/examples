@@ -1,0 +1,70 @@
+name: Showcase a build
+description: Built something with PipesHub? Tell us about it and we'll feature it.
+title: "[Showcase] "
+labels: ["showcase"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for building on PipesHub. This takes about five minutes. We read every submission and feature the ones that would help other developers see what's possible.
+  - type: input
+    id: name
+    attributes:
+      label: What did you build?
+      description: A name and a one-line description.
+      placeholder: "Support Investigator — finds past tickets and engineering issues related to a new support case"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does it solve?
+      description: Who uses it, and what was the situation before.
+    validations:
+      required: true
+  - type: checkboxes
+    id: capabilities
+    attributes:
+      label: Which PipesHub capabilities does it use?
+      options:
+        - label: MCP server (Claude, Cursor, Codex, or another MCP client)
+        - label: SDK (Python, TypeScript, or Go)
+        - label: Enterprise search / semantic search
+        - label: Agents built in PipesHub
+        - label: Connectors (list them below)
+  - type: input
+    id: sources
+    attributes:
+      label: Which data sources does it connect?
+      placeholder: "GitHub, Jira, Slack, Google Drive"
+  - type: dropdown
+    id: vertical
+    attributes:
+      label: Which team is it for?
+      options:
+        - Engineering
+        - Sales
+        - Customer Support
+        - Marketing
+        - Finance
+        - HR
+        - General / cross-team
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Repository or code
+      description: A link, if it's public.
+      placeholder: "https://github.com/you/your-build"
+  - type: input
+    id: demo
+    attributes:
+      label: Demo, screenshot, or video
+      description: A link to anything that shows it working. A 60-second screen recording is ideal.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: What surprised you, what you'd do differently, what you'd like PipesHub to make easier.

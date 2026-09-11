@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "pipeshub": {
+      "url": "${env:PIPESHUB_MCP_URL}",
+      "headers": {
+        "Authorization": "Bearer ${env:PIPESHUB_MCP_TOKEN}"
+      }
+    }
+  }
+}
