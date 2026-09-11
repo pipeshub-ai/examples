@@ -1,8 +1,12 @@
 # Build a Company Knowledge MCP with PipesHub
 
-**Give Claude, Cursor, or Codex secure access to your company's knowledge in about ten minutes.**
+**Give Claude Code, Cursor, or Codex secure access to your company's knowledge in about ten minutes.**
 
 By the end of this guide your coding assistant will answer questions like *"why did we change the payment service architecture?"* using your team's documents, tickets, and conversations — with citations, and without ever seeing anything you aren't allowed to see.
+
+> **Where the ten minutes starts.** This guide assumes PipesHub is already running, you've completed first-run setup (account, LLM provider), and at least one source is connected and indexed. The clock starts *there*. If you're installing from scratch, budget separately for Docker, a 10–15 GB memory requirement, the image pull, and indexing time — the [quickstart](https://github.com/pipeshub-ai/pipeshub-ai#-quickstart-recommended) covers that part.
+>
+> **Requires PipesHub 0.7.0 or later** (Personal Access Tokens were added in 0.7.0). On an older instance, use the OAuth-app setup in the [`mcp-server`](https://github.com/pipeshub-ai/mcp-server) README instead.
 
 ## What you'll build
 
@@ -87,7 +91,7 @@ export PIPESHUB_MCP_TOKEN=eyJhbGciOi...
 
 ## Step 2 — Connect your client (3 minutes)
 
-Pick one. Each option is a single command or a small config file; the exact files are in this folder.
+Pick one. Each option is a single command or a small config file; the exact files are in this folder. **Claude Code is the path we time and recommend first** — one command, no config file, and `claude mcp list` gives you a clean "it's connected" check. The others work the same way but haven't been timed as carefully yet.
 
 <details>
 <summary><strong>Claude Code</strong></summary>
