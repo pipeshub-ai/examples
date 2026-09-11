@@ -6,6 +6,8 @@ By the end of this guide your coding assistant will answer questions like *"why 
 
 > **Where the ten minutes starts.** This guide assumes PipesHub is already running, you've completed first-run setup (account, LLM provider), and at least one source is connected and indexed. The clock starts *there*. If you're installing from scratch, budget separately for Docker, a 10–15 GB memory requirement, the image pull, and indexing time — the [quickstart](https://github.com/pipeshub-ai/pipeshub-ai#-quickstart-recommended) covers that part.
 >
+> **Measured, 11 Sep 2026**, on a fresh `slim` install of the released image (`curl -fsSL https://get.pipeshub.com/install | bash`) with five documents indexed: steps 2–4 below took **46 seconds** end to end with Claude Code — 2 s to connect, 4 s to install the skill, 39 s from question to a four-source cited answer. Step 1 (minting the token in the UI) wasn't timed because it was scripted; budget a couple of minutes of clicking. "Ten minutes" is comfortable.
+>
 > **Requires PipesHub 0.7.0 or later** (Personal Access Tokens were added in 0.7.0). On an older instance, use the OAuth-app setup in the [`mcp-server`](https://github.com/pipeshub-ai/mcp-server) README instead.
 
 ## What you'll build
@@ -24,17 +26,27 @@ An MCP connection between your AI client and your PipesHub instance. MCP (Model 
 
 ## What it looks like
 
+This is a real run against the five documents in [`demo/seed-docs/`](demo/seed-docs/) — a pull request, an incident postmortem, a chat thread, a design doc, and an unrelated handbook page — uploaded to one knowledge base.
+
 You, in Claude Code:
 
-> Why was the retry logic in the billing worker changed last quarter?
+> Why was the retry logic in the billing worker changed? Cite your sources.
 
-Claude, after calling `pipeshub_chat`:
+Claude, 39 seconds later, after calling the PipesHub tools:
 
-> The retry logic was changed to use exponential backoff with jitter after a production incident on March 14 where synchronised retries overloaded the payments provider. The change was made in PR #482 and discussed in #eng-payments before merging. The design rationale is in the "Billing worker resilience" doc.
+> The retry logic was changed because the old approach caused the billing workers to overload Stripe during an incident.
 >
-> Sources: `PR #482 — Add jittered backoff to billing worker`, `INC-2031 postmortem`, `#eng-payments (Mar 15)`, `Billing worker resilience (Google Drive)`
+> **The problem (INC-2031, 2026-03-14)** — The billing worker used a fixed 5-second retry interval. When Stripe calls started failing, all 12 worker replicas retried on the exact same tick. Stripe rate-limited them, which caused more failures, which caused more synchronized retries — a "thundering herd" effect. Marcus Webb summed it up in Slack as "every worker retried Stripe on the same 5s tick and we DDoS'd ourselves."
+>
+> **The fix (PR #482, merged 2026-03-21)** — Priya Natarajan replaced the fixed interval with exponential backoff with full jitter, capped at 2 minutes, with max attempts raised to 6 since retries are now spread out. Approved by Marcus Webb and Dana Okafor.
+>
+> **Sources**
+> - INC-2031 postmortem — `recordId: 7ea600d9…`
+> - PR #482 "Add jittered exponential backoff to the billing worker" — `recordId: 54590a52…`
+> - #eng-payments Slack thread, 2026-03-15 — `recordId: 2223698e…`
+> - "Billing worker resilience" design doc by Dana Okafor — `recordId: 9258fcb4…`
 
-Four sources, three systems, one answer — and if you weren't in the group that can read the postmortem, that source simply wouldn't appear.
+Four sources, one answer, each claim traceable to a record — and the handbook page, which had nothing to do with it, was left out. If you weren't allowed to read the postmortem, that source simply wouldn't appear.
 
 ## Architecture
 

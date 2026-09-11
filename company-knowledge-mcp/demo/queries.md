@@ -31,6 +31,12 @@ Adapt these to your own data. Each one lists what a good answer should pull toge
 - *What assumptions drive the latest revenue forecast?* — the forecast model doc and the finance thread reviewing it.
 - *What's the policy on carrying over unused leave, and has it changed this year?* — the handbook, the policy update announcement, and the HR channel.
 
-## A note on demo data
+## Try it with the seed documents
 
-A ready-made demo company ("Acme Corp") with interconnected engineering, sales, and support data — so you can try these questions before connecting anything — is being built. Until it ships, the fastest way to try this on a fresh install is to upload a few related documents to a knowledge base: a design doc, the meeting notes that led to it, and the summary that followed.
+[`seed-docs/`](seed-docs/) holds five short markdown files that tell one engineering story across four "systems" — a pull request, an incident postmortem, a chat thread, a design doc — plus an unrelated handbook page as a control. Upload them to a knowledge base (**Knowledge → New knowledge base → Upload**) and, once indexed, ask:
+
+- *Why was the retry logic in the billing worker changed? Cite your sources.* — should cite all four related records and ignore the handbook.
+- *What's the on-call policy for public holidays?* — should cite only the handbook.
+- *Who approved PR #482, and what did Dana ask for in the thread?* — should join the PR and the chat thread.
+
+They're a stand-in until a fuller demo company ("Acme Corp"), with connector-shaped records and two personas with different permissions, ships.
