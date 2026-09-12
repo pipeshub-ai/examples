@@ -6,7 +6,8 @@
     "start": "tsx index.ts"
   },
   "dependencies": {
-    "@pipeshub-ai/sdk": "latest"
+    "@pipeshub-ai/sdk": "latest",
+    "zod": "~4.3.6"
   },
   "devDependencies": {
     "tsx": "^4.19.0",

@@ -46,7 +46,7 @@ flowchart LR
     P --> D["Drive · GitHub · Slack · Jira ·<br/>knowledge bases"]
 ```
 
-The app is a thin layer: it makes the same two SDK calls as the [sdk-starter](../sdk-starter/) and renders the results. PipesHub does retrieval, permission filtering, ranking, synthesis, and citation. Nothing about your data leaves your PipesHub instance.
+The app is a thin layer: search through the SDK, the answer from the streaming endpoint (read directly — the SDK's stream parser has a known issue, see the [sdk-starter](../sdk-starter/#how-it-works)), and a page that renders both. PipesHub does retrieval, permission filtering, ranking, synthesis, and citation. Nothing about your data leaves your PipesHub instance.
 
 ## Prerequisites
 
@@ -61,7 +61,8 @@ export PIPESHUB_URL=http://localhost:3000
 export PIPESHUB_BEARER_AUTH=phpat_eyJhbGciOi...
 
 cd python
-uv run app.py            # installs pipeshub-sdk, fastapi, uvicorn on first run
+uv run app.py            # installs pipeshub-sdk, fastapi, uvicorn, httpx on first run
+                         # PORT=8090 uv run app.py if 8080 is taken
 ```
 
 Open **http://localhost:8080** and search for something only your company's data can answer.

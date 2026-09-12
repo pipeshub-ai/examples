@@ -58,21 +58,23 @@ You should see a ranked list of matching records — each with a title, the app 
 
 Two calls do all the work.
 
-**Search** returns ranked records with metadata about where each came from. It is permission-filtered *before* ranking, so a user only ever sees results they're allowed to see:
+**Search** goes through the SDK. It returns ranked chunks with metadata about the record each came from — and it is permission-filtered *before* ranking, so a user only ever sees results they're allowed to see:
 
 ```python
 res = pipeshub.semantic_search.search(query="on-call policy", limit=10)
 ```
 
-**Streaming chat** starts a conversation and returns Server-Sent Events. The stream carries token chunks as they're generated, then a final `RUN_FINISHED` event with the complete persisted conversation — including citations:
+**Streaming chat** starts a conversation and returns Server-Sent Events: token chunks as they're generated, then a final `RUN_FINISHED` event carrying the persisted conversation, including citations under `citations[].citationData.metadata`. The examples read that stream directly (about fifteen lines of SSE parsing) rather than through the SDK — see the note below.
 
 ```python
-with pipeshub.conversations.stream_chat(query="what's our on-call policy?", chat_mode="internal_search") as stream:
-    for event in stream:
-        ...
+POST /api/v1/conversations/stream   {"query": "...", "chatMode": "internal_search"}
 ```
 
 Everything else — connectors, knowledge bases, agents, users — is on the same client object. The generated SDK reference lists every operation: [Python](https://github.com/pipeshub-ai/pipeshub-sdk-python#available-resources-and-operations) · [TypeScript](https://github.com/pipeshub-ai/pipeshub-sdk-typescript#available-resources-and-operations).
+
+> **Two known SDK issues (v1.6.0), verified against PipesHub 0.7.0:**
+> 1. **Streaming.** Both SDKs' generated stream parsers declare each event's `data` as a string, but the server sends JSON objects, so `conversations.stream_chat` / `streamChat` fail on the first event. The examples read the SSE stream directly until the spec is corrected.
+> 2. **TypeScript + zod ≥ 4.4.** The SDK's response validator rejects any response with an *absent* optional field under zod 4.4 or newer. `package.json` here pins `zod ~4.3.6`; keep that pin until the SDK is regenerated.
 
 ## Why not just call an LLM with your documents?
 
