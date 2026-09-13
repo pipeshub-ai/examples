@@ -8,6 +8,8 @@ By the end of this guide your coding assistant will answer questions like *"why 
 >
 > **Measured, 11 Sep 2026**, on a fresh `slim` install of the released image (`curl -fsSL https://get.pipeshub.com/install | bash`) with five documents indexed: steps 2–4 below took **46 seconds** end to end with Claude Code — 2 s to connect, 4 s to install the skill, 39 s from question to a four-source cited answer. Step 1 (minting the token in the UI) wasn't timed because it was scripted; budget a couple of minutes of clicking. "Ten minutes" is comfortable.
 >
+> **Cursor, 13 Sep 2026**, same instance with the Acme Corp demo data loaded: copying `cursor/mcp.json` into the project and asking the first question through the Cursor agent took **17 seconds** to a four-source answer (incident, design doc, Slack thread, pull request — all named), plus one click to approve the `pipeshub_search` tool the first time it runs.
+>
 > **Requires PipesHub 0.7.0 or later** (Personal Access Tokens were added in 0.7.0). On an older instance, use the OAuth-app setup in the [`mcp-server`](https://github.com/pipeshub-ai/mcp-server) README instead.
 
 ## What you'll build
