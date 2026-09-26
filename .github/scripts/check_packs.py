@@ -9,7 +9,9 @@
 - Every record a pack's demo questions cite (INC-2031, PR #482, SUP-114,
   `#eng-payments`, ...) exists in PipesHub's Acme Corp demo data. A pack whose
   README links an open pipeshub-ai pull request is checked against that pull
-  request's data; otherwise against main.
+  request's data; otherwise against main. PIPESHUB_DEMO_FIXTURE=<path> checks
+  every pack against that acme-corp.yaml instead, which is how pipeshub-ai's
+  own integration run tests its checkout.
 
 Run from the repository root: python .github/scripts/check_packs.py
 """
@@ -20,6 +22,7 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -143,8 +146,15 @@ def demo_record_errors(pack: Path) -> list[str]:
     ids = cited_ids((pack / "demo/questions.md").read_text(encoding="utf-8"))
     if not ids:
         return [f"packs/{pack.name}: demo/questions.md names no records in its Should cite column"]
-    ref, why = fixture_ref((pack / "README.md").read_text(encoding="utf-8"))
-    text = fixture_text(ref)
+    local = os.environ.get("PIPESHUB_DEMO_FIXTURE", "").strip()
+    if local:
+        text, why = Path(local).read_text(encoding="utf-8"), local
+    else:
+        try:
+            ref, why = fixture_ref((pack / "README.md").read_text(encoding="utf-8"))
+            text = fixture_text(ref)
+        except urllib.error.URLError as e:
+            return [f"packs/{pack.name}: could not fetch PipesHub's demo data from GitHub: {e}"]
     missing = sorted(i for i in ids if not in_fixture(i, text))
     print(f"packs/{pack.name}: {len(ids)} cited records checked against {why}")
     return [f"packs/{pack.name}: cites {i}, which is not in the demo data ({why})" for i in missing]
