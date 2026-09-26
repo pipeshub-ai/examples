@@ -17,11 +17,11 @@ The ten minutes assumes PipesHub is already running with data indexed (requires 
 
 ## Build for your team
 
-The same platform, packaged as recipes for specific teams. Each Build Pack describes the problem, the data sources, an agent configuration, the questions it answers, and why a plain vector search couldn't. **Coming** — Engineering first.
+The same platform, packaged as recipes for specific teams. Each Build Pack describes the problem, the data sources, an agent configuration, the questions it answers, and why a plain vector search couldn't. You can try each one on the Acme Corp demo data before connecting your own tools.
 
-- **Engineering** — Engineering Knowledge Copilot: *why did we make this architectural decision? What changed between these two releases? Which incidents touched this component?*
-- **Support** — Support Investigation Copilot: *why is this customer seeing this? Has it happened before? Is there an engineering ticket?*
-- **Sales** — Account Intelligence: *what's the current state of this account? What have we committed to? Who are the decision-makers?*
+- [**Engineering Knowledge Copilot**](packs/engineering/) — *why did we build it this way?* Answers from incidents, pull requests, chat threads and design docs together, with a source for every claim. Needs the Demo connector, which ships in the first release after 0.8.0.
+- **Support** — Support Investigation Copilot (coming): *why is this customer seeing this? Has it happened before? Is there an engineering ticket?*
+- **Sales** — Account Intelligence (coming): *what's the current state of this account? What have we committed to? Who are the decision-makers?*
 
 ## Why not just do RAG?
 

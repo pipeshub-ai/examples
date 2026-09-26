@@ -1,0 +1,9 @@
+spec_version: 1
+name: engineering-knowledge
+description: Answers "why did we build it this way?" from our tickets, pull requests, chat and design docs, with sources.
+executor:
+  type: omnigent
+  config:
+    harness: claude-sdk
+interaction:
+  conversational: true
