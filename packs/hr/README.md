@@ -23,7 +23,7 @@ right.
 
 | Source | What it holds in the demo |
 | --- | --- |
-| Google Drive | The People folder: the employee handbook, the parental leave policy, the onboarding checklist for engineers |
+| Google Drive | The People folder: the employee handbook, the parental leave policy, the new-engineer onboarding checklist |
 | Slack | The `#people` channel, including the 2 March announcement about carrying over annual leave |
 | ServiceNow | The HR service desk: HR0001203, a question about carry-over |
 | Google Drive (restricted) | The People managers folder, readable by people managers only |
@@ -84,7 +84,7 @@ reads project instructions:
   company-knowledge agent in the MCP tutorial:
 
   ```bash
-  export PIPESHUB_MCP_URL=http://localhost:3000/mcp
+  export PIPESHUB_MCP_URL=http://localhost:3000/mcp   # https:// for a PipesHub on another machine
   export PIPESHUB_MCP_TOKEN=...   # your personal access token
   export OMNIGENT_RUNNER_ENV_PASSTHROUGH=PIPESHUB_MCP_URL,PIPESHUB_MCP_TOKEN
 

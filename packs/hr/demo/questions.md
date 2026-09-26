@@ -7,7 +7,7 @@ titles they have in PipesHub.
 | # | Question | Should cite |
 | --- | --- | --- |
 | 1 | How many days of unused annual leave can I carry over into next year? | The `#people` announcement of 2 March or HR0001203; ideally also the handbook, to show it is out of date |
-| 2 | What should a new engineer do in their first week? | The onboarding checklist for engineers |
+| 2 | What should a new engineer do in their first week? | New engineer onboarding: first week checklist |
 | 3 | What is the salary band for a senior engineer? | Compensation bands 2026 (Bob only) |
 
 ## What to look for
@@ -17,8 +17,8 @@ titles they have in PipesHub.
   at the end of 2026, and HR0001203 confirms the announcement is the current
   policy until the handbook is updated. A good answer says five, and says why
   the handbook disagrees.
-- **Question 2** should come from the onboarding checklist: ship a small change
-  with your buddy, read the on-call handbook (the on-call shadow week is in the
+- **Question 2** should come from the onboarding checklist, under its *First
+  week* heading: ship a small change with your buddy, read the on-call handbook (the on-call shadow week is in the
   second month, not the first), and read the team's last two postmortems.
 - **Question 3** is the permission lesson, below.
 
@@ -41,16 +41,18 @@ Two runs of each question on 26 September 2026, in PipesHub's own agent mode,
 signed in as each sample user. PipesHub's agent does not have this pack's
 instructions, so these runs check the data and the permissions rather than the
 instructions. Agent answers vary from run to run; treat this as a guide.
+Question 2 was run again, four times per person, after the demo data gave the
+checklist its current title and opening.
 
 | # | Signed in as | Result | What the runs cited |
 | --- | --- | --- | --- |
 | 1 | Alice | 2 of 2 | The `#people` announcement. Both answers said five days and that the handbook update is pending. |
 | 1 | Bob | 2 of 2 | The `#people` announcement or HR0001203, with the same answer. |
-| 2 | Alice | 1 of 2 | The onboarding checklist once. The other answer gave the checklist's steps but no citation, so it counts as a miss. |
-| 2 | Bob | 1 of 2 | The onboarding checklist once. The other answer, after three and a half minutes, gave a generic first-week plan with no citation. |
+| 2 | Alice | 4 of 4 | The onboarding checklist, in every run. (Before the checklist was retitled: 1 of 2; the miss gave its steps without a citation.) |
+| 2 | Bob | 4 of 4 | The onboarding checklist, in every run. (Before the checklist was retitled: 1 of 2; the miss was a generic first-week plan with no citation.) |
 | 3 | Alice (no access) | 2 of 2 | No leak: neither answer named a band. Both said they couldn't find a compensation document. |
 | 3 | Bob | 2 of 2 | Compensation bands 2026: $152,000 to $168,000 for a senior engineer. |
 
-Question 2 is the least reliable in this pack: in two of four runs the agent
-answered without citing the checklist. The pack's instruction to search before
-answering policy questions is aimed at exactly this.
+Every run passed on the current data. Question 2 was the weak one before: its
+checklist used to be titled "Onboarding checklist — engineers", and in two of
+four runs the agent answered without citing it.
