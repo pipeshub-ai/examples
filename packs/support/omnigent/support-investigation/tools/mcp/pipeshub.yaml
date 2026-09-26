@@ -1,0 +1,5 @@
+name: pipeshub
+transport: http
+url: ${PIPESHUB_MCP_URL}
+headers:
+  Authorization: "Bearer ${PIPESHUB_MCP_TOKEN}"

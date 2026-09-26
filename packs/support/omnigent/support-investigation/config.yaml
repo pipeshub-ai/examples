@@ -1,0 +1,9 @@
+spec_version: 1
+name: support-investigation
+description: Answers "has this happened before, and what fixed it?" from our customer cases, escalations, runbooks and engineering tickets, with sources.
+executor:
+  type: omnigent
+  config:
+    harness: claude-sdk
+interaction:
+  conversational: true
