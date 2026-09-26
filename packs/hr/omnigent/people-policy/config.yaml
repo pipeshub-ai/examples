@@ -1,0 +1,9 @@
+spec_version: 1
+name: people-policy
+description: Answers "what is the current policy?" from our handbook, People announcements and HR cases, with sources, and says when the handbook is out of date.
+executor:
+  type: omnigent
+  config:
+    harness: claude-sdk
+interaction:
+  conversational: true

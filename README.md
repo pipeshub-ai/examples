@@ -29,7 +29,7 @@ The same platform, packaged as recipes for specific teams. Each Build Pack descr
 
 - **Finance** — Finance Operations Copilot (coming): *why was this invoice wrong, what's the policy, what does the contract say?*
 
-- **People (HR)** — People Policy Copilot (coming): *what is the current policy, and has it changed since the handbook was written?*
+- [**People Policy Copilot**](packs/hr/) — *what is the current policy, and has it changed since the handbook was written?* Answers from the handbook, People announcements and HR cases, and says when the handbook is out of date. Works on your own connected data today; its demo walkthrough needs the Demo connector from the first release after 0.8.0 and the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585).
 
 ## Why not just do RAG?
 
