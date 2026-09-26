@@ -21,7 +21,7 @@ The same platform, packaged as recipes for specific teams. Each Build Pack descr
 
 - [**Engineering Knowledge Copilot**](packs/engineering/) — *why did we build it this way?* Answers from incidents, pull requests, chat threads and design docs together, with a source for every claim. Works on your own connected data today; its demo walkthrough needs the Demo connector from the first release after 0.8.0.
 
-- **Support** — Support Investigation Copilot (coming): *why is this customer seeing this? Has it happened before? Is there an engineering ticket?*
+- [**Support Investigation Copilot**](packs/support/) — *why is this customer seeing this? Has it happened before? Is there an engineering ticket?* Answers from customer cases, escalations, runbooks and the engineering and finance tickets behind them. Works on your own connected data today; its demo walkthrough needs the Demo connector from the first release after 0.8.0, and one of its three questions also needs the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585).
 
 - [**Account Intelligence**](packs/sales/) — *what's the current state of this account? What have we committed to? Who are the decision-makers?* Answers from account plans, call notes, the deals channel, the customer's support history and deal desk decisions. Works on your own connected data today; its demo walkthrough needs the Demo connector from the first release after 0.8.0 and the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585).
 
