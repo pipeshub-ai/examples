@@ -4,7 +4,7 @@
       "command": "npx",
       "args": [
         "@pipeshub-ai/mcp", "start",
-        "--server-url", "http://localhost:3000",
+        "--server-url", "http://localhost:3000/api/v1",
         "--bearer-auth", "phpat_YOUR_TOKEN_HERE"
       ]
     }
