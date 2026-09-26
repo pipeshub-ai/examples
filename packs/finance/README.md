@@ -83,7 +83,7 @@ reads project instructions:
   company-knowledge agent in the MCP tutorial:
 
   ```bash
-  export PIPESHUB_MCP_URL=http://localhost:3000/mcp
+  export PIPESHUB_MCP_URL=http://localhost:3000/mcp   # https:// for a PipesHub on another machine
   export PIPESHUB_MCP_TOKEN=...   # your personal access token
   export OMNIGENT_RUNNER_ENV_PASSTHROUGH=PIPESHUB_MCP_URL,PIPESHUB_MCP_TOKEN
 
@@ -111,12 +111,13 @@ top-10 search.
 
 1. **The root cause ranks low.** For *"Why was Contoso's invoice wrong, and
    has the billing rule been fixed?"*, the support ticket SUP-121 ranked first
-   for both sample users, and it states both dates. But FIN-38, the ticket that
-   explains the billing rule behind the error, ranked sixth for Alice, below an
-   unrelated case about billing addresses. A model given the top five would
-   know that the rule was fixed, but not what the rule got wrong or that FIN-38
-   found three other April invoices with the same error. The pack's
-   instructions tell the agent to follow a ticket to the ones it names.
+   for both sample users, but it only says that finance resolved it and names
+   their tickets. FIN-38, the ticket that says what the billing rule got wrong
+   and when it was fixed, ranked sixth for Alice, below an unrelated case about
+   billing addresses. A model given the top five would not know what the rule
+   got wrong, when it was fixed, or that three other April invoices had the
+   same error. The pack's instructions tell the agent to follow a ticket to the
+   ones it names.
 2. **Contract terms must not leak, and near misses must not be taken for the
    answer.** For *"What rate do we pay for card processing?"*, Alice's first
    result was the payment processing agreement. Bob's results did not contain

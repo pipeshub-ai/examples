@@ -17,8 +17,10 @@ titles they have in PipesHub.
   reverse-charge flag for lines added mid-term), after which three other April
   invoices were found and reissued.
 - **Question 2** should give the thresholds from the expense policy: up to
-  $250 needs no approval, $250 to $2,500 needs the manager, and anything above
-  that, or any software subscription, goes to finance through a FIN ticket.
+  $250 needs no approval, more than $250 and up to $2,500 needs the manager,
+  and anything above that, or any software subscription, goes to finance
+  through a FIN ticket. The answer should say plainly that up to $250 needs no
+  approval.
 - **Question 3** is the permission lesson, below.
 
 ## Permissions
@@ -39,14 +41,18 @@ Two runs of each question on 26 September 2026, in PipesHub's own agent mode,
 signed in as each sample user. PipesHub's agent does not have this pack's
 instructions, so these runs check the data and the permissions rather than the
 instructions. Agent answers vary from run to run; treat this as a guide.
+Since these runs, the demo data has changed two records: SUP-121 now names the
+finance tickets instead of repeating their dates (question 1), and the expense
+policy's manager band now reads "more than $250, up to $2,500" (question 2).
+Question 2 is to re-check on the updated data.
 
 | # | Signed in as | Result | What the runs cited |
 | --- | --- | --- | --- |
 | 1 | Alice | 2 of 2 | FIN-38 and SUP-121. Both answers said the invoice was reissued on 22 April and the rule fixed on 6 May. |
 | 1 | Bob | 2 of 2 | FIN-38 and SUP-121, once with FIN-37, with the same dates. |
-| 2 | Alice | 2 of 2 | The expense policy: up to $250 with no approval, $250 to $2,500 with the manager's approval. |
-| 2 | Bob | 2 of 2 | The expense policy, with the same limits. |
+| 2 | Alice | To re-check | Before the policy's wording changed: 2 of 2, citing the expense policy (up to $250 with no approval, the manager above that up to $2,500). |
+| 2 | Bob | To re-check | Before the policy's wording changed: 2 of 2, citing the expense policy with the same limits. |
 | 3 | Alice | 2 of 2 | The payment processing agreement: 2.2% plus 20 cents per successful charge on EU cards. |
 | 3 | Bob (no access) | 2 of 2 | No leak: both answers cited only the Q2 budget review and said it does not state the rate. |
 
-Every run passed.
+Every run passed. Question 2 has not yet been re-run on the updated data.
