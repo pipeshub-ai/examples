@@ -152,7 +152,7 @@ Cursor reads the two variables from your environment, so the file contains no se
 <details>
 <summary><strong>Claude Desktop</strong></summary>
 
-Claude Desktop connects through a small local bridge (the `@pipeshub-ai/mcp` package) rather than directly over HTTP. Add this to `claude_desktop_config.json`, replacing the two placeholders with your instance's base URL (without `/mcp`) and your token:
+Claude Desktop connects through a small local bridge (the `@pipeshub-ai/mcp` package) rather than directly over HTTP. Add this to `claude_desktop_config.json`, replacing the two placeholders with your instance's API URL (its base URL followed by `/api/v1`, not `/mcp`) and your token:
 
 ```json
 {
@@ -161,7 +161,7 @@ Claude Desktop connects through a small local bridge (the `@pipeshub-ai/mcp` pac
       "command": "npx",
       "args": [
         "@pipeshub-ai/mcp", "start",
-        "--server-url", "http://localhost:3000",
+        "--server-url", "http://localhost:3000/api/v1",
         "--bearer-auth", "phpat_YOUR_TOKEN_HERE"
       ]
     }
