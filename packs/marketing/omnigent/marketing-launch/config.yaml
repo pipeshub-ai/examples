@@ -1,0 +1,9 @@
+spec_version: 1
+name: marketing-launch
+description: Answers "when did this ship, what was it waiting for, and how did the launch do?" from our launch plans, results, launch threads and engineering records, with sources.
+executor:
+  type: omnigent
+  config:
+    harness: claude-sdk
+interaction:
+  conversational: true

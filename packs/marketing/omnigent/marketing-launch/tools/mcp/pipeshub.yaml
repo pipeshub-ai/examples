@@ -1,0 +1,7 @@
+# Use an https:// address for any PipesHub that isn't on this machine: the
+# token travels in the Authorization header.
+name: pipeshub
+transport: http
+url: ${PIPESHUB_MCP_URL}
+headers:
+  Authorization: "Bearer ${PIPESHUB_MCP_TOKEN}"
