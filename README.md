@@ -20,8 +20,16 @@ The ten minutes assumes PipesHub is already running with data indexed (requires 
 The same platform, packaged as recipes for specific teams. Each Build Pack describes the problem, the data sources, an agent configuration, the questions it answers, and why a plain vector search couldn't. You can try each one on the Acme Corp demo data before connecting your own tools.
 
 - [**Engineering Knowledge Copilot**](packs/engineering/) — *why did we build it this way?* Answers from incidents, pull requests, chat threads and design docs together, with a source for every claim. Needs the Demo connector, which ships in the first release after 0.8.0.
+
 - **Support** — Support Investigation Copilot (coming): *why is this customer seeing this? Has it happened before? Is there an engineering ticket?*
+
 - **Sales** — Account Intelligence (coming): *what's the current state of this account? What have we committed to? Who are the decision-makers?*
+
+- **Marketing** — Marketing Launch Copilot (coming): *when did this ship, what was it waiting for, and how did the launch do?*
+
+- **Finance** — Finance Operations Copilot (coming): *why was this invoice wrong, what's the policy, what does the contract say?*
+
+- **People (HR)** — People Policy Copilot (coming): *what is the current policy, and has it changed since the handbook was written?*
 
 ## Why not just do RAG?
 
