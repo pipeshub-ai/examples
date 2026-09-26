@@ -52,10 +52,11 @@ search, what to follow and what to cite.
 
 You need a PipesHub release that includes the **Demo** connector (the first
 release after 0.8.0; on 0.8.0 and earlier it is not in the connectors list),
-with the extended Acme Corp demo data that adds the support records it builds on (these are in the original demo). That data is
-in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585),
-which is not merged yet; until it ships, the Support Investigation Copilot questions have
-nothing to find.
+Questions 1 and 3 work on the demo data as it ships: the export cases,
+SUP-114, issue #207, PR #211 and the Export runbook are all in it. Question 2
+also needs the finance tickets from the extended demo data in
+[pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585),
+which is not merged yet.
 
 1. **Load the demo.** In PipesHub, go to **Workspace → Connectors**, pick
    **Demo**, add it as a team connector and enable it. If you set PipesHub up
@@ -66,8 +67,7 @@ nothing to find.
 2. **Connect your client.** Follow steps 1 and 2 of the
    [Company Knowledge MCP](../../company-knowledge-mcp/) tutorial: create a
    personal access token and add PipesHub to Claude Code, Cursor, Codex or
-   Claude Desktop. To see the permission lesson, create the token while signed
-   in as the sample user named in [demo/questions.md](demo/questions.md).
+   Claude Desktop.
 3. **Add the instructions** for your client, below.
 4. **Ask the questions** in [demo/questions.md](demo/questions.md).
 
@@ -80,18 +80,25 @@ reads project instructions:
   to your project's `CLAUDE.md`.
 - **Codex:** copy [AGENTS.md](AGENTS.md) into your project root.
 - **Cursor:** add the text of [AGENTS.md](AGENTS.md) as a project rule.
-- **Omnigent:** the [omnigent/support-investigation](omnigent/support-investigation/)
-  folder is a complete agent. From this pack's folder (`packs/support`), run it the same way as the
-  company-knowledge agent in the MCP tutorial:
+- **Omnigent:** the [omnigent/support-investigation](omnigent/support-investigation/) folder is a
+  complete agent. Run it from this pack's folder (`packs/support`) in two
+  terminals. The host is what runs the agent, so the PipesHub settings go in
+  its terminal:
 
   ```bash
+  # Terminal 1: the server, which registers the agent
+  omnigent server --agent ./omnigent/support-investigation/
+
+  # Terminal 2: the host
   export PIPESHUB_MCP_URL=http://localhost:3000/mcp   # https:// for a PipesHub on another machine
   export PIPESHUB_MCP_TOKEN=...   # your personal access token
   export OMNIGENT_RUNNER_ENV_PASSTHROUGH=PIPESHUB_MCP_URL,PIPESHUB_MCP_TOKEN
-
-  omnigent server --agent ./omnigent/support-investigation/   # terminal 1
-  omnigent host --server http://localhost:6767        # terminal 2
+  omnigent host --server http://localhost:6767
   ```
+
+  If an Omnigent server is already running, stop it first with
+  `omnigent server stop`; otherwise `omnigent server` reuses it and the agent
+  is not registered.
 
   Then open `http://localhost:6767` and choose **support-investigation** from the agent
   menu in the message box (under *Agents → Other…*).
