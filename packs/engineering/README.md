@@ -81,7 +81,7 @@ reads project instructions:
 - **Codex:** copy [AGENTS.md](AGENTS.md) into your project root.
 - **Cursor:** add the text of [AGENTS.md](AGENTS.md) as a project rule.
 - **Omnigent:** the [omnigent/engineering-knowledge](omnigent/engineering-knowledge/)
-  folder is a complete agent. From this folder, run it the same way as the
+  folder is a complete agent. From this pack's folder (`packs/engineering`), run it the same way as the
   company-knowledge agent in the MCP tutorial:
 
   ```bash
