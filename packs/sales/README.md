@@ -85,7 +85,7 @@ reads project instructions:
   company-knowledge agent in the MCP tutorial:
 
   ```bash
-  export PIPESHUB_MCP_URL=http://localhost:3000/mcp
+  export PIPESHUB_MCP_URL=http://localhost:3000/mcp   # https:// for a PipesHub on another machine
   export PIPESHUB_MCP_TOKEN=...   # your personal access token
   export OMNIGENT_RUNNER_ENV_PASSTHROUGH=PIPESHUB_MCP_URL,PIPESHUB_MCP_TOKEN
 
