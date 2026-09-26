@@ -27,7 +27,7 @@ The same platform, packaged as recipes for specific teams. Each Build Pack descr
 
 - **Marketing** — Marketing Launch Copilot (coming): *when did this ship, what was it waiting for, and how did the launch do?*
 
-- **Finance** — Finance Operations Copilot (coming): *why was this invoice wrong, what's the policy, what does the contract say?*
+- [**Finance Operations Copilot**](packs/finance/) — *why was this invoice wrong, what's the policy, what does the contract say?* Answers from finance tickets, policies, budget reviews and contracts. Needs the Demo connector (first release after 0.8.0) with the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585).
 
 - **People (HR)** — People Policy Copilot (coming): *what is the current policy, and has it changed since the handbook was written?*
 

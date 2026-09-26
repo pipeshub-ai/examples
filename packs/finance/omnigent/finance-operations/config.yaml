@@ -1,0 +1,9 @@
+spec_version: 1
+name: finance-operations
+description: Answers "why was this invoice wrong, what is the policy, what does the contract say?" from our finance tickets, policies, budgets and contracts, with sources.
+executor:
+  type: omnigent
+  config:
+    harness: claude-sdk
+interaction:
+  conversational: true
