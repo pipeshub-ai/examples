@@ -25,7 +25,7 @@ The same platform, packaged as recipes for specific teams. Each Build Pack descr
 
 - **Sales** — Account Intelligence (coming): *what's the current state of this account? What have we committed to? Who are the decision-makers?*
 
-- **Marketing** — Marketing Launch Copilot (coming): *when did this ship, what was it waiting for, and how did the launch do?*
+- [**Marketing Launch Copilot**](packs/marketing/) — *when did this ship, what was it waiting for, and how did the launch do?* Answers from launch plans, results, the launch channel and the engineering records a launch depends on. Needs the Demo connector (first release after 0.8.0) with the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585).
 
 - **Finance** — Finance Operations Copilot (coming): *why was this invoice wrong, what's the policy, what does the contract say?*
 
