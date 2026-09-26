@@ -9,7 +9,7 @@ to read the citations.
 | --- | --- | --- |
 | 0–8 s | A client with an empty prompt | "You have a renewal call with Northwind Traders in ten minutes." |
 | 8–15 s | Type: *Is the Northwind Traders renewal at risk, and what is being done about it?* | "Ask it the way you'd ask your manager." |
-| 15–35 s | The answer appears with sources: the account plan, the call notes of 16 April, the `#deals` thread | "It was at risk in April because of an outage; since the fix, it's back on track. Both halves, with sources." |
+| 15–35 s | The answer appears with sources: the account plan, the call notes of 16 April, the `#deals` thread | "It was at risk in April because its exports kept failing; since the fix, it's back on track. Both halves, with sources." |
 | 35–45 s | Click the call notes citation | "Every claim points back to where it came from." |
 | 45–55 s | Ask: *What discount did the deal desk approve for the Northwind renewal?* | "Signed in as someone on the deal desk, you get the decision. Anyone else doesn't." |
 | 55–60 s | The PipesHub and examples repository links | "Connect your own tools, and it answers for your accounts." |
