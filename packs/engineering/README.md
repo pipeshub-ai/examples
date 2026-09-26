@@ -80,18 +80,25 @@ reads project instructions:
   to your project's `CLAUDE.md`.
 - **Codex:** copy [AGENTS.md](AGENTS.md) into your project root.
 - **Cursor:** add the text of [AGENTS.md](AGENTS.md) as a project rule.
-- **Omnigent:** the [omnigent/engineering-knowledge](omnigent/engineering-knowledge/)
-  folder is a complete agent. From this pack's folder (`packs/engineering`), run it the same way as the
-  company-knowledge agent in the MCP tutorial:
+- **Omnigent:** the [omnigent/engineering-knowledge](omnigent/engineering-knowledge/) folder is a
+  complete agent. Run it from this pack's folder (`packs/engineering`) in two
+  terminals. The host is what runs the agent, so the PipesHub settings go in
+  its terminal:
 
   ```bash
+  # Terminal 1: the server, which registers the agent
+  omnigent server --agent ./omnigent/engineering-knowledge/
+
+  # Terminal 2: the host
   export PIPESHUB_MCP_URL=http://localhost:3000/mcp   # https:// for a PipesHub on another machine
   export PIPESHUB_MCP_TOKEN=...   # your personal access token
   export OMNIGENT_RUNNER_ENV_PASSTHROUGH=PIPESHUB_MCP_URL,PIPESHUB_MCP_TOKEN
-
-  omnigent server --agent ./omnigent/engineering-knowledge/   # terminal 1
-  omnigent host --server http://localhost:6767                # terminal 2
+  omnigent host --server http://localhost:6767
   ```
+
+  If an Omnigent server is already running, stop it first with
+  `omnigent server stop`; otherwise `omnigent server` reuses it and the agent
+  is not registered.
 
   Then open `http://localhost:6767` and choose **engineering-knowledge** from
   the agent menu in the message box (under *Agents → Other…*).
