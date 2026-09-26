@@ -19,9 +19,9 @@ The ten minutes assumes PipesHub is already running with data indexed (requires 
 
 The same platform, packaged as recipes for specific teams. Each Build Pack describes the problem, the data sources, an agent configuration, the questions it answers, and why a plain vector search couldn't. Packs marked *coming* aren't written yet. Once the Demo connector ships (in the first release after 0.8.0), you can try a pack on the Acme Corp demo data before connecting anything. Every pack except Engineering also needs the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585), which isn't merged yet; until then, use them with your own connected tools.
 
-- [**Engineering Knowledge Copilot**](packs/engineering/) — *why did we build it this way?* Answers from incidents, pull requests, chat threads and design docs together, with a source for every claim. Needs the Demo connector, which ships in the first release after 0.8.0.
+- [**Engineering Knowledge Copilot**](packs/engineering/) — *why did we build it this way?* Answers from incidents, pull requests, chat threads and design docs together, with a source for every claim. Works on your own connected data today; its demo walkthrough needs the Demo connector from the first release after 0.8.0.
 
-- [**Support Investigation Copilot**](packs/support/) — *why is this customer seeing this? Has it happened before? Is there an engineering ticket?* Answers from customer cases, escalations, runbooks and the engineering and finance tickets behind them. Needs the Demo connector (first release after 0.8.0) with the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585).
+- [**Support Investigation Copilot**](packs/support/) — *why is this customer seeing this? Has it happened before? Is there an engineering ticket?* Answers from customer cases, escalations, runbooks and the engineering and finance tickets behind them. Works on your own connected data today; its demo walkthrough needs the Demo connector from the first release after 0.8.0 and the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585).
 
 - **Sales** — Account Intelligence (coming): *what's the current state of this account? What have we committed to? Who are the decision-makers?*
 
