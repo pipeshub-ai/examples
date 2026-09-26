@@ -24,7 +24,7 @@ escalation or a customer who asks "is this fixed yet?"
 | Source | What it holds in the demo |
 | --- | --- |
 | ServiceNow | Customer cases, including three export-timeout cases (CS0004471 Northwind Traders, CS0004478 Contoso, CS0004480 Fabrikam) |
-| Jira | Support escalations (SUP-114, SUP-121, SUP-098) and the finance tickets a billing problem led to (FIN-37, FIN-38) |
+| Jira | Support escalations (SUP-114, SUP-121, SUP-098) and the finance tickets a billing problem led to (FIN-37, FIN-38, which come with the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585)) |
 | Slack | The `#support-escalations` channel |
 | Google Drive | The Support folder, including the export runbook |
 | GitHub | The engineering side of an escalation: issue #207 and PR #211 in `acme/svc-export` |

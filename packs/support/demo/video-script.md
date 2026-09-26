@@ -3,7 +3,9 @@
 A screen recording for the README, a post, or a talk. Record it on the Acme
 Corp demo data, signed in as Bob, with the Support Investigation Copilot pack set up
 in one client (Claude Code or Omnigent). Keep the answer on screen long enough
-to read the citations.
+to read the citations. The Contoso invoice beat (45–55 s) needs the finance
+tickets from the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585); until that ships, record
+without it.
 
 | Time | On screen | Voice-over |
 | --- | --- | --- |

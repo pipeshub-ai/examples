@@ -1,7 +1,9 @@
 # Questions for the Acme Corp demo data
 
-Three questions to try once the Demo connector has indexed. Each one needs the right records to
-answer well. "Should cite" lists the records a good answer draws on, by the
+Three questions to try once the Demo connector has indexed. Questions 1 and 3
+work on the demo data as it ships; question 2 needs the finance tickets from
+the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585), which is not merged yet. Each one needs the
+right records to answer well. "Should cite" lists the records a good answer draws on, by the
 titles they have in PipesHub.
 
 | # | Question | Should cite |
