@@ -23,7 +23,7 @@ The same platform, packaged as recipes for specific teams. Each Build Pack descr
 
 - **Support** — Support Investigation Copilot (coming): *why is this customer seeing this? Has it happened before? Is there an engineering ticket?*
 
-- **Sales** — Account Intelligence (coming): *what's the current state of this account? What have we committed to? Who are the decision-makers?*
+- [**Account Intelligence**](packs/sales/) — *what's the current state of this account? What have we committed to? Who are the decision-makers?* Answers from account plans, call notes, the deals channel, the customer's support history and deal desk decisions. Works on your own connected data today; its demo walkthrough needs the Demo connector from the first release after 0.8.0 and the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585).
 
 - [**Marketing Launch Copilot**](packs/marketing/) — *when did this ship, what was it waiting for, and how did the launch do?* Answers from launch plans, results, the launch channel and the engineering records a launch depends on. Works on your own connected data today; its demo walkthrough needs the Demo connector from the first release after 0.8.0 and the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585).
 
