@@ -79,18 +79,25 @@ reads project instructions:
   to your project's `CLAUDE.md`.
 - **Codex:** copy [AGENTS.md](AGENTS.md) into your project root.
 - **Cursor:** add the text of [AGENTS.md](AGENTS.md) as a project rule.
-- **Omnigent:** the [omnigent/people-policy](omnigent/people-policy/)
-  folder is a complete agent. From this pack's folder (`packs/hr`), run it the same way as the
-  company-knowledge agent in the MCP tutorial:
+- **Omnigent:** the [omnigent/people-policy](omnigent/people-policy/) folder is a
+  complete agent. Run it from this pack's folder (`packs/hr`) in two
+  terminals. The host is what runs the agent, so the PipesHub settings go in
+  its terminal:
 
   ```bash
+  # Terminal 1: the server, which registers the agent
+  omnigent server --agent ./omnigent/people-policy/
+
+  # Terminal 2: the host
   export PIPESHUB_MCP_URL=http://localhost:3000/mcp   # https:// for a PipesHub on another machine
   export PIPESHUB_MCP_TOKEN=...   # your personal access token
   export OMNIGENT_RUNNER_ENV_PASSTHROUGH=PIPESHUB_MCP_URL,PIPESHUB_MCP_TOKEN
-
-  omnigent server --agent ./omnigent/people-policy/   # terminal 1
-  omnigent host --server http://localhost:6767        # terminal 2
+  omnigent host --server http://localhost:6767
   ```
+
+  If an Omnigent server is already running, stop it first with
+  `omnigent server stop`; otherwise `omnigent server` reuses it and the agent
+  is not registered.
 
   Then open `http://localhost:6767` and choose **people-policy** from the agent
   menu in the message box (under *Agents → Other…*).
@@ -101,7 +108,7 @@ The full list, with the records each answer should cite and what test runs
 cited, is in [demo/questions.md](demo/questions.md). Two of them:
 
 - *"How many days of unused annual leave can I carry over into next year?"* Five, from the 2 March announcement, with the handbook's older three-day rule named as out of date.
-- *"What is the salary band for a senior engineer?"* Bob, a people manager, gets the band; Alice is pointed to the People team, because PipesHub never gives the agent the document.
+- *"What is the salary band for a senior engineer?"* Bob, a people manager, gets the band. Alice isn't given the compensation document, because PipesHub never hands it to the agent; the instructions then ask the agent to point her to the People team (the recorded runs used PipesHub's own agent, so they show only that she didn't get the document).
 
 ## Why naive RAG isn't enough
 

@@ -11,7 +11,7 @@ to read the citations.
 | 8–15 s | Type: *How many days of unused annual leave can I carry over into next year?* | "Ask it the way you'd ask the People team." |
 | 15–35 s | The answer appears with sources: the `#people` announcement, HR0001203, the handbook | "Five days, from the March announcement. It says the handbook still says three, and why." |
 | 35–45 s | Click the announcement citation | "Every claim points back to where it came from." |
-| 45–55 s | Ask: *What is the salary band for a senior engineer?* as a people manager | "Managers see the bands; everyone else is pointed to the People team." |
+| 45–55 s | A second take, signed in as Bob (a people manager). Ask: *What is the salary band for a senior engineer?* | "Signed in as a people manager, you get the band. Anyone else doesn't get the document." |
 | 55–60 s | The PipesHub and examples repository links | "Connect your own handbook, channel and service desk, and it answers for your company." |
 
 Before recording, run the questions once and check the citations on screen
