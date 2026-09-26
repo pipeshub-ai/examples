@@ -37,22 +37,24 @@ we pay for card processing?"*:
 
 ## Test runs
 
-Two runs of each question on 26 September 2026, in PipesHub's own agent mode,
+Two runs of each question on 26 September 2026, on the current demo data,
 signed in as each sample user. PipesHub's agent does not have this pack's
 instructions, so these runs check the data and the permissions rather than the
 instructions. Agent answers vary from run to run; treat this as a guide.
-Since these runs, the demo data has changed two records: SUP-121 now names the
-finance tickets instead of repeating their dates (question 1), and the expense
-policy's manager band now reads "more than $250, up to $2,500" (question 2).
-Question 2 is to re-check on the updated data.
+Questions 1 and 2 ran in PipesHub's agent mode and in its search mode;
+question 3 ran in search mode.
 
 | # | Signed in as | Result | What the runs cited |
 | --- | --- | --- | --- |
-| 1 | Alice | 2 of 2 | FIN-38 and SUP-121. Both answers said the invoice was reissued on 22 April and the rule fixed on 6 May. |
-| 1 | Bob | 2 of 2 | FIN-38 and SUP-121, once with FIN-37, with the same dates. |
-| 2 | Alice | To re-check | Before the policy's wording changed: 2 of 2, citing the expense policy (up to $250 with no approval, the manager above that up to $2,500). |
-| 2 | Bob | To re-check | Before the policy's wording changed: 2 of 2, citing the expense policy with the same limits. |
-| 3 | Alice | 2 of 2 | The payment processing agreement: 2.2% plus 20 cents per successful charge on EU cards. |
-| 3 | Bob (no access) | 2 of 2 | No leak: both answers cited only the Q2 budget review and said it does not state the rate. |
+| 1 | Alice | 4 of 4 | FIN-37 and FIN-38 in every run, plus SUP-121 in search mode. |
+| 1 | Bob | 4 of 4 | FIN-37 and FIN-38 in every run. |
+| 2 | Alice | 4 of 4 | The expense policy: up to $250 per purchase without approval, the manager above that up to $2,500, finance above $2,500. |
+| 2 | Bob | 4 of 4 | The expense policy, with the same limits. |
+| 3 | Alice | 2 of 2 | The payment processing agreement. |
+| 3 | Bob (no access) | 2 of 2 | No leak: both answers cited only the Q2 budget review and did not give the rate. |
 
-Every run passed. Question 2 has not yet been re-run on the updated data.
+Every answer was correct. In agent mode, one run of question 2 for each user
+first failed the automated check. The answer said "without any approval", a
+wording the check did not yet accept, and the check now accepts it. Six more
+agent-mode runs of question 2 all gave the $250 limit and said no approval is
+needed. No answer contained a link to the made-up demo sites.
