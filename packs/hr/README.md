@@ -80,7 +80,7 @@ reads project instructions:
 - **Codex:** copy [AGENTS.md](AGENTS.md) into your project root.
 - **Cursor:** add the text of [AGENTS.md](AGENTS.md) as a project rule.
 - **Omnigent:** the [omnigent/people-policy](omnigent/people-policy/)
-  folder is a complete agent. From this folder, run it the same way as the
+  folder is a complete agent. From this pack's folder (`packs/hr`), run it the same way as the
   company-knowledge agent in the MCP tutorial:
 
   ```bash
