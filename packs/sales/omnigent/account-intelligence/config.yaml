@@ -1,0 +1,9 @@
+spec_version: 1
+name: account-intelligence
+description: Answers "what's the current state of this account?" from our account plans, call notes, deal threads and support history, with sources.
+executor:
+  type: omnigent
+  config:
+    harness: claude-sdk
+interaction:
+  conversational: true
