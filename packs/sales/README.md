@@ -101,7 +101,7 @@ reads project instructions:
 The full list, with the records each answer should cite and what test runs
 cited, is in [demo/questions.md](demo/questions.md). Two of them:
 
-- *"Is the Northwind Traders renewal at risk, and what is being done about it?"* Not any more: it was at risk in early April because of the export timeouts, and after the fix the 16 April call put it back on track. The answer joins the account plan, the call notes and the `#deals` thread.
+- *"Is the Northwind Traders renewal at risk, and what is being done about it?"* Not any more: it was at risk in early April because its exports kept failing, and after the fix the 16 April call put it back on track. The answer joins the account plan, the call notes and the `#deals` thread.
 - *"What discount did the deal desk approve for the Northwind renewal?"* Bob, on the deal desk, gets the decision; Alice gets no answer, because PipesHub filters by the person before the agent sees anything.
 
 ## Why naive RAG isn't enough

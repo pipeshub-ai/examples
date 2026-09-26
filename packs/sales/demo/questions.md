@@ -13,7 +13,7 @@ titles they have in PipesHub.
 ## What to look for
 
 - **Question 1** has a history. From early April the renewal was at risk: the
-  export timeouts broke Northwind's monthly reporting, and on 10 April the
+  failing exports broke Northwind's monthly reporting, and on 10 April the
   `#deals` thread asked when the fix would land. After the fix shipped, the
   16 April call put it back on track, and the account plan was updated the
   same day. A good answer gives the current state first (on track, renewal
