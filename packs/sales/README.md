@@ -82,17 +82,19 @@ reads project instructions:
 - **Cursor:** add the text of [AGENTS.md](AGENTS.md) as a project rule.
 - **Omnigent:** the [omnigent/account-intelligence](omnigent/account-intelligence/) folder is a
   complete agent. Run it from this pack's folder (`packs/sales`) in two
-  terminals. The host is what runs the agent, so the PipesHub settings go in
-  its terminal:
+  terminals, and set the PipesHub settings in both: the server reads them when
+  it registers the agent, and the host passes them to the agent when it runs.
 
   ```bash
-  # Terminal 1: the server, which registers the agent
-  omnigent server --agent ./omnigent/account-intelligence/
-
-  # Terminal 2: the host
+  # In both terminals
   export PIPESHUB_MCP_URL=http://localhost:3000/mcp   # https:// for a PipesHub on another machine
   export PIPESHUB_MCP_TOKEN=...   # your personal access token
   export OMNIGENT_RUNNER_ENV_PASSTHROUGH=PIPESHUB_MCP_URL,PIPESHUB_MCP_TOKEN
+
+  # Terminal 1: the server, which registers the agent
+  omnigent server --agent ./omnigent/account-intelligence/
+
+  # Terminal 2: the host, which runs it
   omnigent host --server http://localhost:6767
   ```
 
