@@ -33,7 +33,7 @@ FIXTURE = "backend/python/app/connectors/sources/demo/fixture/acme-corp.yaml"
 PIPESHUB = "pipeshub-ai/pipeshub-ai"
 PACK_FILES = ("README.md", "AGENTS.md", "claude-code/CLAUDE.md.snippet", "demo/questions.md")
 # Record identifiers as the demo data writes them.
-RECORD_ID = re.compile(r"\b[A-Z]{2,4}-\d+\b|\b(?:CS|HR)\d{7}\b|(?:PR|issue) #\d+|`#[a-z0-9-]+`")
+RECORD_ID = re.compile(r"\b[A-Z]{2,4}-\d+\b|\b(?:CS|HR)\d{7}\b|(?i:PR|issue) #\d+|`#[a-z0-9-]+`")
 LINK = re.compile(r"\]\(([^)\s]+)\)")
 
 
@@ -134,10 +134,17 @@ def cited_ids(questions_md: str) -> set[str]:
     return ids
 
 
+def channels(text: str) -> set[str]:
+    """The demo's chat channels, by the names it gives its containers ("#eng-payments")."""
+    containers = (yaml.safe_load(text) or {}).get("containers") or []
+    return {str(c.get("name")) for c in containers if str(c.get("name", "")).startswith("#")}
+
+
 def in_fixture(record_id: str, text: str) -> bool:
     if record_id.startswith("`#"):
-        return record_id.strip("`#") in text
-    if record_id.startswith(("PR #", "issue #")):
+        # A channel is a whole name: "#eng-pay" or "#deals" is not "#eng-payments".
+        return record_id.strip("`") in channels(text)
+    if record_id.lower().startswith(("pr #", "issue #")):
         return re.search(rf"#{record_id.split('#')[1]}\b", text) is not None
     return re.search(rf"\b{re.escape(record_id)}\b", text) is not None
 
