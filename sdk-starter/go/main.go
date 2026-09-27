@@ -12,8 +12,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"net/http"
 	"os"
 	"strings"
+	"time"
 
 	pipeshub "github.com/pipeshub-ai/pipeshub-sdk-go"
 	"github.com/pipeshub-ai/pipeshub-sdk-go/models/components"
@@ -35,6 +37,8 @@ func main() {
 
 	client := pipeshub.New(
 		pipeshub.WithServerURL(baseURL+"/api/v1"),
+		// The SDK's default client gives up after 60s, which a streamed answer can outlast.
+		pipeshub.WithClient(&http.Client{Timeout: 3 * time.Minute}),
 		pipeshub.WithSecurity(components.Security{BearerAuth: pipeshub.Pointer(token)}),
 	)
 	ctx := context.Background()
