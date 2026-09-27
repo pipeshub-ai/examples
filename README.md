@@ -36,7 +36,7 @@ Every pack works with your own connected tools today. To try one on the Acme Cor
 
 ## Run one now
 
-Already have PipesHub and a token? This connects Claude Code in one command (the [full tutorial](company-knowledge-mcp/) covers Cursor, Claude Desktop and Codex too):
+Already have PipesHub and a token? This connects Claude Code in one command (the [full tutorial](company-knowledge-mcp/) covers Cursor, Claude Desktop and Codex too). Run it from the project you want to use PipesHub in, or add `--scope user` to make it available in every project:
 
 ```bash
 export PIPESHUB_MCP_URL=http://localhost:3000/mcp     # https://<your-instance>/mcp for a remote PipesHub
