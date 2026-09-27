@@ -12,8 +12,10 @@ The ten minutes assumes PipesHub is already running with data indexed (requires 
 
 ### Also in this repo
 
-- [**SDK Starter**](sdk-starter/) — the two calls behind everything (semantic search, streaming cited answers) in Python and TypeScript, for when you want this inside your own application.
+- [**SDK Starter**](sdk-starter/) — the two calls behind everything (semantic search, streaming cited answers) in Python, TypeScript and Go, for when you want this inside your own application.
 - [**Private Enterprise Search**](private-enterprise-search/) — those same two calls behind a search box, as a one-file app you can build a front end on.
+- [**Knowledge Base Upload**](knowledge-base-upload/) — upload your own files to a knowledge base from code and wait until they are searchable, in Go.
+- [**Sign in with PipesHub**](sign-in-with-pipeshub/) — an app other people sign in to, where each person searches only what they may see (OAuth with PKCE), in TypeScript.
 
 ## Build for your team
 

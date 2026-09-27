@@ -1,6 +1,6 @@
 # Build with the PipesHub SDK
 
-**Add permission-aware company knowledge to your own Python or TypeScript application.**
+**Add permission-aware company knowledge to your own Python, TypeScript or Go application.**
 
 This is the smallest useful program you can write against PipesHub: search your company's knowledge, then ask a question and stream back a cited answer. It's the foundation for anything that needs "what does my company know about X?" as a function call — internal tools, Slack bots, support consoles, custom agents.
 
@@ -12,14 +12,13 @@ A short script that:
 2. Runs a semantic search and prints the top results with their sources
 3. Starts a conversation, streams the answer token by token, and prints the citations at the end
 
-Both versions do the same thing:
+All three versions do the same thing:
 
 | | |
 |---|---|
 | [`python/`](python/) | `pipeshub-sdk` on PyPI — [`main.py`](python/main.py) |
 | [`typescript/`](typescript/) | `@pipeshub-ai/sdk` on npm — [`index.ts`](typescript/index.ts) |
-
-A Go SDK also exists ([`pipeshub-ai/pipeshub-sdk-go`](https://github.com/pipeshub-ai/pipeshub-sdk-go)); the same two calls apply.
+| [`go/`](go/) | [`pipeshub-sdk-go`](https://github.com/pipeshub-ai/pipeshub-sdk-go) — [`main.go`](go/main.go) |
 
 ## Prerequisites
 
@@ -52,6 +51,13 @@ npm install
 npx tsx index.ts "what's our on-call policy?"
 ```
 
+### Go
+
+```bash
+cd go
+go run . "what's our on-call policy?"        # Go 1.23 or later
+```
+
 You should see a ranked list of matching records — each with a title, the app it came from, and a relevance score — followed by a streamed answer and the sources it drew on.
 
 ## How it works
@@ -73,7 +79,7 @@ POST /api/v1/conversations/stream   {"query": "...", "chatMode": "internal_searc
 Everything else — connectors, knowledge bases, agents, users — is on the same client object. The generated SDK reference lists every operation: [Python](https://github.com/pipeshub-ai/pipeshub-sdk-python#available-resources-and-operations) · [TypeScript](https://github.com/pipeshub-ai/pipeshub-sdk-typescript#available-resources-and-operations).
 
 > **Two known SDK issues (v1.6.0), verified against PipesHub 0.7.0:**
-> 1. **Streaming.** Both SDKs' generated stream parsers declare each event's `data` as a string, but the server sends JSON objects, so `conversations.stream_chat` / `streamChat` fail on the first event. The examples read the SSE stream directly until the spec is corrected.
+> 1. **Streaming.** The Python and TypeScript SDKs' generated stream parsers declare each event's `data` as a string, but the server sends JSON objects, so `conversations.stream_chat` / `streamChat` fail on the first event. Those two examples read the SSE stream directly until the spec is corrected. The Go SDK hands `data` over as raw text, so the Go example uses `Conversations.StreamChat` and decodes each event itself.
 > 2. **TypeScript + zod ≥ 4.4.** The SDK's response validator rejects any response with an *absent* optional field under zod 4.4 or newer. `package.json` here pins `zod ~4.3.6`; keep that pin until the SDK is regenerated.
 
 ## Why not just call an LLM with your documents?
