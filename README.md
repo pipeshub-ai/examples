@@ -45,7 +45,7 @@ claude mcp add --transport http pipeshub "$PIPESHUB_MCP_URL" \
   --header "Authorization: Bearer $PIPESHUB_MCP_TOKEN"
 ```
 
-Then ask Claude Code something only your company would know, such as *"why did we change the payment service architecture?"*, and check that the answer names its sources.
+That connects PipesHub. Before the first question, do [step 3 of the tutorial](company-knowledge-mcp/README.md#step-3--tell-your-assistant-when-to-use-it-2-minutes): it tells Claude Code when to search your company's knowledge, and without it a fresh chat often answers from memory instead. Then ask something only your own documents can answer, and check that the answer names its sources.
 
 ## Why not just do RAG?
 
