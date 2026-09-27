@@ -1,6 +1,6 @@
 # Account Intelligence
 
-**A Build Pack for sales teams.** It answers the question an account executive asks before every renewal call: *what is the current state of this account, and what have we committed to?* It searches account plans, call notes, deal threads, the customer's support history and deal desk decisions together, and it says where each part of the answer came from.
+**Walk into the renewal call knowing the account's real state.** This Build Pack for sales teams answers the question an account executive asks before every renewal call: *what is the current state of this account, and what have we committed to?* It searches account plans, call notes, deal threads, the customer's support history and deal desk decisions together, and it says where each part of the answer came from. See [the questions it answers](#questions-it-answers).
 
 This is a recipe, not a new application. It is PipesHub, one of the AI clients
 you already use, and a short set of instructions for that client. You can try

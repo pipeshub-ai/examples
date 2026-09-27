@@ -2,6 +2,8 @@
 
 **Add permission-aware company knowledge to your own Python, TypeScript or Go application.**
 
+**The problem:** you're building an internal tool, a Slack bot, a support console or an agent, and it needs to ask "what does my company know about X?" and get an answer it can cite, without you building search, permissions and citations yourself.
+
 This is the smallest useful program you can write against PipesHub: search your company's knowledge, then ask a question and stream back a cited answer. It's the foundation for anything that needs "what does my company know about X?" as a function call — internal tools, Slack bots, support consoles, custom agents.
 
 ## What you'll build

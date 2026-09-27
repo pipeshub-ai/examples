@@ -1,37 +1,51 @@
 # What can I build with PipesHub?
 
-[PipesHub](https://github.com/pipeshub-ai/pipeshub-ai) is an open-source platform that connects your company's knowledge — Google Drive, GitHub, Slack, Jira, Salesforce, Zendesk, and [many more](https://github.com/pipeshub-ai/pipeshub-ai#connectors) — to AI, with permissions enforced and every answer cited. This repository is the set of things you can build on it, each one a short tutorial that ends with something working.
+Your company's answers are spread across Google Drive, Slack, Jira, GitHub and the other tools your teams use, and your AI assistants either can't see them or can see too much. [PipesHub](https://github.com/pipeshub-ai/pipeshub-ai) is an open-source platform that connects all of it — Google Drive, GitHub, Slack, Jira, Salesforce, Zendesk, and [many more](https://github.com/pipeshub-ai/pipeshub-ai#connectors) — to AI, with permissions enforced and every answer cited.
 
-## Start here
+Each folder in this repository solves one problem, as a short tutorial that ends with something working. Find your problem below.
 
-### [Company Knowledge MCP](company-knowledge-mcp/) — about 10 minutes
+## Pick your problem
 
-Give Claude Code, Cursor, Claude Desktop, or Codex secure access to your company's knowledge. One token, one command. Your assistant answers *"why did we change the payment service architecture?"* with the pull request, the ticket, the chat thread, and the design doc — each cited, and only if you're allowed to see them.
+| Your problem | What you'll have at the end | Start here |
+| --- | --- | --- |
+| *"My coding assistant can't see our docs, tickets or chat, so it guesses."* | Claude Code, Cursor, Claude Desktop or Codex answering from your company's knowledge, with a source for every claim and only what you're allowed to see. About 10 minutes. | [Company Knowledge MCP](company-knowledge-mcp/) |
+| *"I want 'what does the company know about X?' as a function call in my own tool or bot."* | A small program that searches and streams a cited answer, in Python, TypeScript or Go. | [SDK Starter](sdk-starter/) |
+| *"We need one search box across every tool, that respects permissions, on our own servers."* | A one-file search page: a cited answer next to the matching records, each linking to the original. | [Private Enterprise Search](private-enterprise-search/) |
+| *"Some of our documents live in no tool a connector covers."* | Your own files uploaded to a knowledge base from code, and a program that waits until they're searchable. | [Knowledge Base Upload](knowledge-base-upload/) |
+| *"I'm building an app my whole team uses, and each person must see only their own documents."* | A web app where people sign in with PipesHub and every search runs as them (OAuth with PKCE). | [Sign in with PipesHub](sign-in-with-pipeshub/) |
 
-The ten minutes assumes PipesHub is already running with data indexed (requires 0.7.0 or later). If you're starting from nothing, the [quickstart](https://github.com/pipeshub-ai/pipeshub-ai#-quickstart-recommended) gets you a local instance first.
+### By team
 
-### Also in this repo
+Each Build Pack is a recipe for one team: the problem, the sources it reads, instructions for your AI client, the questions it answers and the records a good answer cites.
 
-- [**SDK Starter**](sdk-starter/) — the two calls behind everything (semantic search, streaming cited answers) in Python, TypeScript and Go, for when you want this inside your own application.
-- [**Private Enterprise Search**](private-enterprise-search/) — those same two calls behind a search box, as a one-file app you can build a front end on.
-- [**Knowledge Base Upload**](knowledge-base-upload/) — upload your own files to a knowledge base from code and wait until they are searchable, in Go.
-- [**Sign in with PipesHub**](sign-in-with-pipeshub/) — an app other people sign in to, where each person searches only what they may see (OAuth with PKCE), in TypeScript.
+| Team | The question it answers | Pack |
+| --- | --- | --- |
+| Engineering | *"Why did we build it this way?"* — from incidents, pull requests, chat threads and design docs together. | [Engineering Knowledge Copilot](packs/engineering/) |
+| Support | *"Has this happened before, who else hit it, and is it fixed?"* — from customer cases, escalations, runbooks and the engineering tickets behind them. | [Support Investigation Copilot](packs/support/) |
+| Sales | *"What's the real state of this account before my renewal call, and what have we committed to?"* — from account plans, call notes, deal threads and support history. | [Account Intelligence](packs/sales/) |
+| Marketing | *"When did it ship, what was the launch waiting for, and how did it do?"* — from launch plans, results, the launch channel and the engineering records. | [Marketing Launch Copilot](packs/marketing/) |
+| Finance | *"Why was this invoice wrong, is it fixed, and what does the policy or contract say?"* — from finance tickets, policies, budget reviews and contracts. | [Finance Operations Copilot](packs/finance/) |
+| People (HR) | *"What is the current policy, and is the handbook out of date?"* — from the handbook, People announcements and HR cases. | [People Policy Copilot](packs/hr/) |
 
-## Build for your team
+Every pack works with your own connected tools today. To try one on the Acme Corp demo data first, you need the Demo connector (the first release after 0.8.0); most packs also need the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585), which isn't merged yet, and each pack's page says which of its questions do.
 
-The same platform, packaged as recipes for specific teams. Each Build Pack describes the problem, the data sources, an agent configuration, the questions it answers, and why a plain vector search couldn't. Packs marked *coming* aren't written yet. Once the Demo connector ships (in the first release after 0.8.0), you can try a pack on the Acme Corp demo data before connecting anything. Most packs also need the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585), which isn't merged yet; each pack's page says which of its questions do. Until then, any pack works with your own connected tools.
+## Before you start
 
-- [**Engineering Knowledge Copilot**](packs/engineering/) — *why did we build it this way?* Answers from incidents, pull requests, chat threads and design docs together, with a source for every claim. Works on your own connected data today; its demo walkthrough needs the Demo connector from the first release after 0.8.0.
+- **A running PipesHub** with at least one source connected and indexed. The tutorials' times start there. If you're starting from nothing, the [quickstart](https://github.com/pipeshub-ai/pipeshub-ai#-quickstart-recommended) gets you a local instance first. The MCP tutorial needs 0.7.0 or later.
+- **A Personal Access Token** from **Workspace → Developer settings → Personal Access Tokens**. Sign in with PipesHub uses an OAuth app instead; its page says how to create one.
 
-- [**Support Investigation Copilot**](packs/support/) — *why is this customer seeing this? Has it happened before? Is there an engineering ticket?* Answers from customer cases, escalations, runbooks and the engineering and finance tickets behind them. Works on your own connected data today; its demo walkthrough needs the Demo connector from the first release after 0.8.0, and one of its three questions also needs the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585).
+## Run one now
 
-- [**Account Intelligence**](packs/sales/) — *what's the current state of this account? What have we committed to? Who are the decision-makers?* Answers from account plans, call notes, the deals channel, the customer's support history and deal desk decisions. Works on your own connected data today; its demo walkthrough needs the Demo connector from the first release after 0.8.0 and the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585).
+Already have PipesHub and a token? This connects Claude Code in one command (the [full tutorial](company-knowledge-mcp/) covers Cursor, Claude Desktop and Codex too):
 
-- [**Marketing Launch Copilot**](packs/marketing/) — *when did this ship, what was it waiting for, and how did the launch do?* Answers from launch plans, results, the launch channel and the engineering records a launch depends on. Works on your own connected data today; its demo walkthrough needs the Demo connector from the first release after 0.8.0 and the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585).
+```bash
+export PIPESHUB_MCP_URL=http://localhost:3000/mcp     # https://<your-instance>/mcp for a remote PipesHub
+export PIPESHUB_MCP_TOKEN=phpat_...                   # your Personal Access Token
+claude mcp add --transport http pipeshub "$PIPESHUB_MCP_URL" \
+  --header "Authorization: Bearer $PIPESHUB_MCP_TOKEN"
+```
 
-- [**Finance Operations Copilot**](packs/finance/) — *why was this invoice wrong, what's the policy, what does the contract say?* Answers from finance tickets, policies, budget reviews and contracts. Works on your own connected data today; its demo walkthrough needs the Demo connector from the first release after 0.8.0 and the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585).
-
-- [**People Policy Copilot**](packs/hr/) — *what is the current policy, and has it changed since the handbook was written?* Answers from the handbook, People announcements and HR cases, and says when the handbook is out of date. Works on your own connected data today; its demo walkthrough needs the Demo connector from the first release after 0.8.0 and the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585).
+Then ask Claude Code something only your company would know, such as *"why did we change the payment service architecture?"*, and check that the answer names its sources.
 
 ## Why not just do RAG?
 

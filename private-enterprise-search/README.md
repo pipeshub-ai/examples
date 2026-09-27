@@ -2,6 +2,8 @@
 
 **A permission-aware, citation-backed search page across your company's data — running on your own infrastructure.**
 
+**The problem:** people search tool after tool to find one answer, and hosted enterprise search usually means handing a copy of your company's data to someone else. You want one search box, on your own servers, that only shows each person what they may see.
+
 This is the "Glean-style" experience: one search box that reaches every connected system, only ever shows a person what they're allowed to see, and gives a synthesised answer with sources alongside the raw results. The example is deliberately small — one file — so you can see exactly where the value comes from and then build your own interface on top.
 
 ## What you'll build

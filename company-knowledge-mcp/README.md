@@ -2,6 +2,10 @@
 
 **Give Claude Code, Cursor, or Codex secure access to your company's knowledge in about ten minutes.**
 
+**The problem:** your coding assistant can read the code, but not the design doc, the incident, the ticket or the chat thread that explain it, so it guesses. Pasting them in by hand is slow, and it's easy to paste in something that shouldn't leave the tool it came from.
+
+**Who it's for:** anyone who uses an AI coding assistant at a company with more than one tool.
+
 By the end of this guide your coding assistant will answer questions like *"why did we change the payment service architecture?"* using your team's documents, tickets, and conversations — with citations, and without ever seeing anything you aren't allowed to see.
 
 > **Where the ten minutes starts.** This guide assumes PipesHub is already running, you've completed first-run setup (account, LLM provider), and at least one source is connected and indexed. The clock starts *there*. If you're installing from scratch, budget separately for Docker, a 10–15 GB memory requirement, the image pull, and indexing time — the [quickstart](https://github.com/pipeshub-ai/pipeshub-ai#-quickstart-recommended) covers that part.

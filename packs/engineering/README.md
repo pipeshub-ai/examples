@@ -1,10 +1,11 @@
 # Engineering Knowledge Copilot
 
-**A Build Pack for engineering teams.** It answers the question every new
-engineer and every on-call engineer asks sooner or later: *why did we build it
-this way?* It does that by searching your incidents, pull requests, chat
-threads and design docs together, and it says where each part of the answer
-came from.
+**Stop asking the one person who remembers why the code is the way it is.**
+This Build Pack for engineering teams answers the question every new engineer
+and every on-call engineer asks sooner or later: *why did we build it this
+way?* It searches your incidents, pull requests, chat threads and design docs
+together, and it says where each part of the answer came from. See
+[the questions it answers](#questions-it-answers).
 
 This is a recipe, not a new application. It is PipesHub, one of the AI clients
 you already use, and a short set of instructions for that client. You can try

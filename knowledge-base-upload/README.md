@@ -2,6 +2,8 @@
 
 **Put your own documents into PipesHub from code, and know when they're searchable.**
 
+**The problem:** some of what your company knows isn't in any tool a connector covers — a folder of runbooks, an export from an internal system, files your app generates — so your AI assistants never see it.
+
 Connectors cover the systems your company already uses. For everything else — a folder of runbooks, exports from a tool without a connector, files your app generates — upload them to a knowledge base. This example does that in one short Go program.
 
 ## What it does
