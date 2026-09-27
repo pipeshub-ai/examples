@@ -1,6 +1,6 @@
 module github.com/pipeshub-ai/examples/sdk-starter/go
 
-go 1.22
+go 1.23
 
 require github.com/pipeshub-ai/pipeshub-sdk-go v1.6.0
 

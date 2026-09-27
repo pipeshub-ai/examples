@@ -55,7 +55,7 @@ npx tsx index.ts "what's our on-call policy?"
 
 ```bash
 cd go
-go run . "what's our on-call policy?"        # Go 1.22 or later
+go run . "what's our on-call policy?"        # Go 1.23 or later
 ```
 
 You should see a ranked list of matching records — each with a title, the app it came from, and a relevance score — followed by a streamed answer and the sources it drew on.

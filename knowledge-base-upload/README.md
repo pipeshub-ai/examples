@@ -16,7 +16,7 @@ go run . "Team handbook" handbook.md onboarding.pdf
 
 ## Prerequisites
 
-- Go 1.22 or later, and a PipesHub instance with an LLM and embedding model configured (indexing needs both).
+- Go 1.23 or later (the Go SDK needs it), and a PipesHub instance with an LLM and embedding model configured (indexing needs both).
 - A **Personal Access Token with `kb:read`, `kb:write` and `kb:upload`.** Finding the knowledge base needs `kb:read`, creating it needs `kb:write`, and uploading files needs `kb:upload`. Stock PipesHub doesn't offer the two write scopes to personal access tokens: its `MCP_SCOPES` setting lists read and search scopes only. Ask whoever runs your instance to add `kb:write` and `kb:upload` to `MCP_SCOPES`. Then create the token in **Workspace → Developer settings → Personal Access Tokens** with all three selected.
 
 ```bash
