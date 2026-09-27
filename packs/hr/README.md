@@ -7,6 +7,12 @@ you already use, and a short set of instructions for that client. You can try
 it on the Acme Corp demo data without connecting anything, then point it at
 your own tools.
 
+## What you get
+
+![PipesHub answering “How many days of unused annual leave can I carry over into next year?” on the Acme Corp demo data: five days, citing HR0001203, with the older handbook shown as still saying three.](demo/answer.png)
+
+*PipesHub's own chat answering this pack's first question, signed in as Alice, on the Acme Corp demo data. With this pack, your AI client gets the same sources through MCP and follows the pack's instructions on top.*
+
 ## The problem
 
 Policies change faster than handbooks. A change is announced in a channel, a

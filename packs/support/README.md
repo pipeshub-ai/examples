@@ -7,6 +7,12 @@ you already use, and a short set of instructions for that client. You can try
 it on the Acme Corp demo data without connecting anything, then point it at
 your own tools.
 
+## What you get
+
+![PipesHub answering “Which customers reported export timeouts, and what fixed it?” on the Acme Corp demo data, as a table of Northwind Traders, Contoso and Fabrikam with their ServiceNow cases, escalation SUP-114 and issue #207.](demo/answer.png)
+
+*PipesHub's own chat answering this pack's first question, signed in as Bob, on the Acme Corp demo data. With this pack, your AI client gets the same sources through MCP and follows the pack's instructions on top.*
+
 ## The problem
 
 A customer's problem is rarely new, but the history of it is spread out. The
