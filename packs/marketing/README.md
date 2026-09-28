@@ -1,6 +1,6 @@
 # Marketing Launch Copilot
 
-**A Build Pack for marketing teams.** It answers the questions a launch raises: *when did this ship, what was the launch waiting for, how did it do, and what is next?* It searches launch plans, results, the launch channel and the engineering records a launch depends on, and it says where each part of the answer came from.
+**Write about a launch, or plan the next one, without piecing it together by hand.** This Build Pack for marketing teams answers the questions a launch raises: *when did this ship, what was the launch waiting for, how did it do, and what is next?* It searches launch plans, results, the launch channel and the engineering records a launch depends on, and it says where each part of the answer came from. See [the questions it answers](#questions-it-answers).
 
 This is a recipe, not a new application. It is PipesHub, one of the AI clients
 you already use, and a short set of instructions for that client. You can try

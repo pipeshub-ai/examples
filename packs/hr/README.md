@@ -1,6 +1,6 @@
 # People Policy Copilot
 
-**A Build Pack for People (HR) teams.** It answers the policy questions employees ask every week: *what is the current policy, and has it changed since the handbook was written?* It searches the handbook, People announcements and HR service desk cases together, says where each part of the answer came from, and says when the handbook has not caught up.
+**Give the current policy, not what the handbook said before it changed.** This Build Pack for People (HR) teams answers the policy questions employees ask every week: *what is the current policy, and has it changed since the handbook was written?* It searches the handbook, People announcements and HR service desk cases together, says where each part of the answer came from, and says when the handbook has not caught up. See [the questions it answers](#questions-it-answers).
 
 This is a recipe, not a new application. It is PipesHub, one of the AI clients
 you already use, and a short set of instructions for that client. You can try

@@ -2,6 +2,8 @@
 
 **Build an app other people use, where each person searches only what they're allowed to see.**
 
+**The problem:** a token in your app's config makes every user search with your permissions, so anyone whose access is narrower than yours can see documents they shouldn't. Each person has to sign in and search as themselves.
+
 A personal access token is right for your own scripts. An app for your team is different: each person signs in, approves what the app may do, and every search runs as them. So the answers respect their permissions, not yours. That's OAuth 2.0 with the authorization code flow and PKCE, and this example is a working version in one TypeScript file with no web framework.
 
 ## What you'll build

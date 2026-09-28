@@ -1,6 +1,6 @@
 # Support Investigation Copilot
 
-**A Build Pack for support teams.** It answers the questions a support agent has when a customer reports a problem: *has this happened before, who else hit it, is there an engineering ticket, and what do I tell the customer?* It searches customer cases, escalations, runbooks and the engineering records behind them together, and it says where each part of the answer came from.
+**Answer "has this happened before, and is it fixed?" while the customer is still waiting.** This Build Pack for support teams answers the questions a support agent has when a customer reports a problem: *has this happened before, who else hit it, is there an engineering ticket, and what do I tell the customer?* It searches customer cases, escalations, runbooks and the engineering records behind them together, and it says where each part of the answer came from. See [the questions it answers](#questions-it-answers).
 
 This is a recipe, not a new application. It is PipesHub, one of the AI clients
 you already use, and a short set of instructions for that client. You can try

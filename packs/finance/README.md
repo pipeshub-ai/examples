@@ -1,6 +1,6 @@
 # Finance Operations Copilot
 
-**A Build Pack for finance teams.** It answers the questions finance operations handles every week: *why was this invoice wrong and is it fixed, what is the spending policy, and what does the contract say?* It searches finance tickets, the support escalations behind them, policies, budget reviews and contracts together, and it says where each part of the answer came from.
+**Stop answering the same policy question twice.** This Build Pack for finance teams answers the questions finance operations handles every week: *why was this invoice wrong and is it fixed, what is the spending policy, and what does the contract say?* It searches finance tickets, the support escalations behind them, policies, budget reviews and contracts together, and it says where each part of the answer came from. See [the questions it answers](#questions-it-answers).
 
 This is a recipe, not a new application. It is PipesHub, one of the AI clients
 you already use, and a short set of instructions for that client. You can try
