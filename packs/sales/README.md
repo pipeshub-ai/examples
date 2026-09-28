@@ -7,6 +7,12 @@ you already use, and a short set of instructions for that client. You can try
 it on the Acme Corp demo data without connecting anything, then point it at
 your own tools.
 
+## What you get
+
+![PipesHub answering “Is the Northwind Traders renewal at risk, and what is being done about it?” on the Acme Corp demo data: at risk in early April, back on track since the 16 April call. It cites the Northwind account plan, the call notes, ServiceNow case CS0004471, PR #211 and the deal desk decision.](demo/answer.png)
+
+*PipesHub's own chat answering this pack's first question, signed in as Bob, on the Acme Corp demo data. Bob is on the deal desk, so the approved discount appears; signed in as Alice, it doesn't. With this pack, your AI client gets the same sources through MCP and follows the pack's instructions on top.*
+
 ## The problem
 
 An account's real state is spread across the account plan, the notes from the

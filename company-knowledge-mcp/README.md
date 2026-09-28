@@ -54,6 +54,10 @@ Claude, 39 seconds later, after calling the PipesHub tools:
 
 Four sources, one answer, each claim traceable to a record — and the handbook page, which had nothing to do with it, was left out. If you weren't allowed to read the postmortem, that source simply wouldn't appear.
 
+The same kind of answer in another client: Omnigent, connected to PipesHub over MCP on the Acme Corp demo data and asked *"Why was the payment service architecture changed, and how was the decision made?"* — the same incident, asked more broadly. It ends with its sources from Jira, Slack, Google Drive and GitHub.
+
+![An agent in Omnigent, connected to PipesHub over MCP, explaining why the payment service architecture changed and how the decision was made, ending with five sources: incident INC-2031 in Jira, two #eng-payments Slack messages, the Billing worker resilience design doc in Google Drive, and PR #482 on GitHub](demo/omnigent-answer.png)
+
 ## Architecture
 
 ```mermaid

@@ -7,6 +7,12 @@ you already use, and a short set of instructions for that client. You can try
 it on the Acme Corp demo data without connecting anything, then point it at
 your own tools.
 
+## What you get
+
+![PipesHub answering “When did we launch background exports, and why did we pick that date?” on the Acme Corp demo data: 21 April 2026, a week after PR #211 shipped. It cites the launch plan and the #launch go/no-go thread.](demo/answer.png)
+
+*PipesHub's own chat answering this pack's first question, signed in as Alice, on the Acme Corp demo data. With this pack, your AI client gets the same sources through MCP and follows the pack's instructions on top.*
+
 ## The problem
 
 A launch date depends on engineering, the evidence for the launch story lives

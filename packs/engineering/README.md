@@ -12,6 +12,12 @@ you already use, and a short set of instructions for that client. You can try
 it on the Acme Corp demo data without connecting anything, then point it at
 your own tools.
 
+## What you get
+
+![PipesHub answering “Why was the payment service architecture changed, and how was the decision made?” on the Acme Corp demo data. The answer cites incident INC-2031, the Billing worker resilience design doc, PR #482 and the #eng-payments thread, each marked Demo.](demo/answer.png)
+
+*PipesHub's own chat answering this pack's first question, signed in as Bob, on the Acme Corp demo data. With this pack, your AI client gets the same sources through MCP and follows the pack's instructions on top. Note that this run repeats the design doc's claim that the `#eng-payments` thread compared four retry options; the thread itself weighs only two. That is the kind of gap the pack's instructions ask the agent to flag (see [why naive RAG isn't enough](#why-naive-rag-isnt-enough)).*
+
 ## The problem
 
 The reason behind a piece of engineering is rarely in one place. An incident

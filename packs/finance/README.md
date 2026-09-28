@@ -7,6 +7,12 @@ you already use, and a short set of instructions for that client. You can try
 it on the Acme Corp demo data without connecting anything, then point it at
 your own tools.
 
+## What you get
+
+![PipesHub answering “Why was Contoso’s invoice wrong, and has the billing rule been fixed?” on the Acme Corp demo data. It cites FIN-37 for the reissued invoice and FIN-38 for the billing rule fixed on 6 May.](demo/answer.png)
+
+*PipesHub's own chat answering this pack's first question, signed in as Bob, on the Acme Corp demo data. With this pack, your AI client gets the same sources through MCP and follows the pack's instructions on top.*
+
 ## The problem
 
 A billing error starts as a customer complaint in support, becomes a finance
