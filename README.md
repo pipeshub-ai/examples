@@ -27,7 +27,7 @@ Each Build Pack is a recipe for one team: the problem, the sources it reads, ins
 | Finance | *"Why was this invoice wrong, is it fixed, and what does the policy or contract say?"* — from finance tickets, policies, budget reviews and contracts. | [Finance Operations Copilot](packs/finance/) |
 | People (HR) | *"What is the current policy, and is the handbook out of date?"* — from the handbook, People announcements and HR cases. | [People Policy Copilot](packs/hr/) |
 
-Every pack works with your own connected tools today. To try one on the Acme Corp demo data first, you need the Demo connector (the first release after 0.8.0); most packs also need the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585), which isn't merged yet, and each pack's page says which of its questions do.
+Every pack works with your own connected tools today. To try one on the Acme Corp demo data first, you need PipesHub 0.10.0 or later. The Demo connector in 0.9.x loads a smaller data set that most packs' questions can't use, and each pack's page says which of its questions need 0.10.0.
 
 ## Before you start
 

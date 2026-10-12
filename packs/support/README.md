@@ -30,7 +30,7 @@ escalation or a customer who asks "is this fixed yet?"
 | Source | What it holds in the demo |
 | --- | --- |
 | ServiceNow | Customer cases, including three export-timeout cases (CS0004471 Northwind Traders, CS0004478 Contoso, CS0004480 Fabrikam) |
-| Jira | Support escalations (SUP-114, SUP-121, SUP-098) and the finance tickets a billing problem led to (FIN-37, FIN-38, which come with the extended demo data in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585)) |
+| Jira | Support escalations (SUP-114, SUP-121, SUP-098) and the finance tickets a billing problem led to (FIN-37, FIN-38, in the demo data from 0.10.0) |
 | Slack | The `#support-escalations` channel |
 | Google Drive | The Support folder, including the export runbook |
 | GitHub | The engineering side of an escalation: issue #207 and PR #211 in `acme/svc-export` |
@@ -56,13 +56,11 @@ search, what to follow and what to cite.
 
 ## Try it on the demo data
 
-You need a PipesHub release that includes the **Demo** connector (the first
-release after 0.8.0; on 0.8.0 and earlier it is not in the connectors list),
+You need PipesHub 0.9.0 or later, which has the **Demo** connector (0.8.0 and
+earlier don't).
 Questions 1 and 3 work on the demo data as it ships: the export cases,
 SUP-114, issue #207, PR #211 and the Export runbook are all in it. Question 2
-also needs the finance tickets from the extended demo data in
-[pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585),
-which is not merged yet.
+also needs the finance tickets, which the Demo connector loads from 0.10.0.
 
 1. **Load the demo.** In PipesHub, go to **Workspace → Connectors**, pick
    **Demo**, add it as a team connector and enable it. If you set PipesHub up

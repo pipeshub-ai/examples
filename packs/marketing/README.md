@@ -53,12 +53,10 @@ search, what to follow and what to cite.
 
 ## Try it on the demo data
 
-You need a PipesHub release that includes the **Demo** connector (the first
-release after 0.8.0; on 0.8.0 and earlier it is not in the connectors list),
-with the extended Acme Corp demo data that adds the Marketing folder, `#launch` channel and launch core folder. That data is
-in [pipeshub-ai#3585](https://github.com/pipeshub-ai/pipeshub-ai/pull/3585),
-which is not merged yet; until it ships, the Marketing Launch Copilot questions have
-nothing to find.
+You need PipesHub 0.10.0 or later. From 0.10.0, the **Demo** connector loads
+the Acme Corp demo data with the Marketing folder, `#launch` channel and launch core folder. The Demo
+connector in 0.9.x loads a smaller set without them, so the Marketing Launch Copilot questions
+have nothing to find there, and 0.8.0 and earlier have no Demo connector.
 
 1. **Load the demo.** In PipesHub, go to **Workspace → Connectors**, pick
    **Demo**, add it as a team connector and enable it. If you set PipesHub up
