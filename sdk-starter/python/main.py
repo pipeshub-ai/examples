@@ -29,6 +29,8 @@ def main() -> None:
     with Pipeshub(
         server_url=f"{base_url}/api/v1",
         security=models.Security(bearer_auth=token),
+        # The SDK's default leaves httpx's 5-second timeout, which a search on a busy server can exceed.
+        timeout_ms=60_000,
     ) as pipeshub:
         search(pipeshub, query)
     ask(base_url, token, query)
