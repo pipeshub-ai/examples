@@ -1,0 +1,13 @@
+question_id,section,question
+SEC-01,Access control,Does the platform support single sign-on with SAML or OpenID Connect?
+SEC-02,Access control,How are search results and answers restricted to what each user is allowed to see in the source systems?
+SEC-03,Access control,"Can API access be limited with scoped tokens, and how is a token revoked?"
+SEC-04,Vulnerability management,How do we report a security vulnerability to you?
+ARCH-01,Deployment,Can the product be self-hosted in our own private cloud or data center?
+ARCH-02,Deployment,Which databases and services does a deployment run?
+AI-01,AI models,"Can we use our own LLM provider, or a model that runs on our own servers?"
+AI-02,AI models,Is our data used to train your AI models?
+INT-01,Integrations,Which business systems can the platform connect to?
+INT-02,Integrations,Can AI assistants such as Claude or Cursor query the platform?
+LEGAL-01,Service levels,What uptime SLA do you commit to for the hosted service?
+CERT-01,Compliance,Do you hold a current SOC 2 Type II report?

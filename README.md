@@ -12,6 +12,7 @@ Each folder in this repository solves one problem, as a short tutorial that ends
 | *"I want 'what does the company know about X?' as a function call in my own tool or bot."* | A small program that searches and streams a cited answer, in Python, TypeScript or Go. | [SDK Starter](sdk-starter/) |
 | *"We need one search box across every tool, that respects permissions, on our own servers."* | A one-file search page: a cited answer next to the matching records, each linking to the original. | [Private Enterprise Search](private-enterprise-search/) |
 | *"Some of our documents live in no tool a connector covers."* | Your own files uploaded to a knowledge base from code, and a program that waits until they're searchable. | [Knowledge Base Upload](knowledge-base-upload/) |
+| *"Every deal brings another security questionnaire, and we copy answers from a stale spreadsheet."* | A workbench that drafts each answer from your documents with its sources, flags the ones with no evidence, and exports only what a person approved. | [Security Questionnaire](security-questionnaire/) |
 | *"I'm building an app my whole team uses, and each person must see only their own documents."* | A web app where people sign in with PipesHub and every search runs as them (OAuth with PKCE). | [Sign in with PipesHub](sign-in-with-pipeshub/) |
 
 ### By team
